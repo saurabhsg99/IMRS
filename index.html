@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMRS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        
+
+    <div class="cursor" id="cursor"></div>
+    <img src="Assets/logo.png" class="logo" alt="" />
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="title">International Mathematics Research Society
+                <div class="aurora">
+                    <div class="aurora__item"></div>
+                    <div class="aurora__item"></div>
+                    <div class="aurora__item"></div>
+                    <div class="aurora__item"></div>
+                </div>
+            </h1>
+            <div class="contentt">
+                <span class="line" style="animation-delay: 0s;">The International Mathematics Research Society (IMRS)
+                    aims to foster global collaboration among mathematicians, researchers, and scholars by promoting the
+                    advancement of mathematical knowledge through high-quality research, discussions, and
+                    innovations.</span>
+                <br><br>
+                <span class="line" style="animation-delay: 2s;">Our objective is to provide a platform for the exchange
+                    of ideas, dissemination of cutting-edge mathematical discoveries, and encouragement of
+                    interdisciplinary applications of mathematics in science, engineering, and technology.</span>
+            </div>
+            <br>
+            <a href="#webinars"><button id="exploreBtn">Explore Webinars</button></a>
+        </div>
+    </header>
+    <svg class="editorial" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 24 150 28 " preserveAspectRatio="none">
+        <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 
+   58-18 88-18s
+   58 18 88 18 
+   58-18 88-18 
+   58 18 88 18
+   v44h-352z" />
+        </defs>
+        <g class="parallax1">
+            <use xlink:href="#gentle-wave" x="50" y="3" fill="#211C84" />
+        </g>
+        <g class="parallax2">
+            <use xlink:href="#gentle-wave" x="50" y="0" fill="#4D55CC" />
+        </g>
+        <g class="parallax3">
+            <use xlink:href="#gentle-wave" x="50" y="9" fill="#7A73D1" />
+        </g>
+        <g class="parallax4">
+            <use xlink:href="#gentle-wave" x="50" y="6" fill="#B5A8D5" />
+        </g>
+    </svg>
+
+
+    <section id="webinars">
+        <!-- <h1>Upcoming webinars</h1> -->
+        <h1 class="title">Upcoming webinars
+            <div class="aurora">
+                <div class="aurora__item"></div>
+                <div class="aurora__item"></div>
+                <div class="aurora__item"></div>
+                <div class="aurora__item"></div>
+            </div>
+        </h1>
+        <div class="cards-container">
+            <div class="card">
+                <img src="Brochure.png"
+                    alt="Tech">
+                <h2>Technology Program</h2>
+                <button class="view-pdf-btn" data-pdf="Brochure.pdf">View PDF</button>
+                <button class="apply-btn">Apply Now</button>
+            </div>
+            <!-- <div class="card">
+            <img src="https://coreldrawdesign.com/resources/previews/preview-abstract-business-webinar-conference-poster-template-1646282947.jpg" alt="Business">
+            <h2>Business Program</h2>
+            <button class="apply-btn">Apply Now</button>
+            <button class="view-pdf-btn" data-pdf="Brochure.pdf">View PDF</button>
+        </div>
+        <div class="card">
+            <img src="https://coreldrawdesign.com/resources/previews/preview-abstract-business-webinar-conference-poster-template-1646282947.jpg" alt="Education">
+            <h2>Education Program</h2>
+            <button class="apply-btn">Apply Now</button>
+            <button class="view-pdf-btn" data-pdf="education.pdf">View PDF</button>
+        </div> -->
+        </div>
+    </section>
+
+    <!-- Popup Form -->
+    <div class="popup-overlay" id="popupOverlay">
+        
+        <div class="popup">
+            <span class="close-btn" id="closeBtn">&times;</span>
+            <h2>Application Form</h2>
+            <form id="applicationForm" enctype="multipart/form-data">
+                <!-- Step 1 -->
+                <div class="form-step active" id="step1">
+                    
+                    <input type="text" name="name" id="name" placeholder="Your Name" required>
+                    <input type="email" name="email" id="email" placeholder="Your Email" required>
+                    <input type="tel" name="mobile" id="mobile" placeholder="Your Mobile Number" required>
+                    <input type="text" name="affiliation" id="affiliation" placeholder="Your Affiliation">
+                    <input type="text" name="designation" id="designation" placeholder="Your Designation">
+                    <button type="button" id="nextBtn">Next</button>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="form-step" id="step2">
+                    <div class="qr-section">
+                        <p>Scan the QR code to make a payment:</p>
+                        <img src="Brochure.png" alt="QR Code for Payment">
+                    </div>
+
+                    <label>Upload Payment Proof:</label>
+                    <input type="file" name="proofUpload" id="paymentProof" accept=".jpg,.jpeg,.png,.pdf" required>
+
+                    <button type="button" id="prevBtn">Back</button>
+                    <button type="submit" id="submitBtn">Submit Application</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
