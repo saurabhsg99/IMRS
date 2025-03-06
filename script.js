@@ -82,6 +82,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    // PDF Viewer
+    document.querySelectorAll(".view-pdf-btn").forEach(button => {
+        button.addEventListener("click", () => {
+            window.open(button.getAttribute("data-pdf"), "_blank");
+        });
+    });
+    
     // Helper Functions
     function validateInputs(container) {
         let isValid = true;
