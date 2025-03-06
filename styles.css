@@ -69,7 +69,7 @@ body {
 
 header {
     padding: 60px 20px;
-    padding-bottom: 130px;
+    /* padding-bottom: 130px; */
 }
 
 .hero-content {
@@ -321,10 +321,10 @@ button:disabled {
     cursor: not-allowed;
     box-shadow: none;
     opacity: 0.6;
-}
+} 
 
 /* Prevent Hover Effect on Disabled Button */
-button:disabled:hover {
+ button:disabled:hover {
     background-color: #cccccc;
     transform: none;
 }
@@ -339,9 +339,10 @@ button:disabled:hover {
     max-height: 60px;
     margin: 0;
     z-index: 2;
-    bottom: 0;
-    position: absolute;
-    left: 0px;
+
+    margin-top: 10px;
+    position: relative;
+ 
     float: left;
 }
 
@@ -605,7 +606,8 @@ input:focus {
 @media screen and (max-width: 1225px) {
     :root {
         --fs: 2.8rem;
-        --para-sz:1.1em;
+        --para-sz:1.2em;
+        --mg-bt:50px;
     }
 
 }
@@ -633,8 +635,8 @@ input:focus {
 @media screen and (max-width: 650px) {
     :root {
         --fs: 2.3rem;
-        --para-sz:0.9rem;
-        --mg-bt:20px;
+        --para-sz:1rem;
+        --mg-bt:50px;
     }
 
     .title{
@@ -645,8 +647,8 @@ input:focus {
 
 @media screen and (max-width: 530px) {
     :root {
-        --fs: 2rem;
-        --para-sz:0.9rem;
+        --fs: 2.2rem;
+        --para-sz:1.05rem;
         --mg-bt:20px;
     }
 
@@ -663,8 +665,8 @@ input:focus {
 
 @media screen and (max-width: 450px) {
     :root {
-        --fs: 1.8rem;
-        --para-sz:0.8rem;
+        --fs: 2rem;
+        --para-sz:0.9rem;
         --mg-bt:20px;
     }
 
@@ -681,9 +683,9 @@ input:focus {
 
 @media screen and (max-width: 370px) {
     :root {
-        --fs: 1.6rem;
-        --para-sz:0.7rem;
-        --mg-bt:20px;
+        --fs: 2rem;
+        --para-sz:0.8rem;
+        --mg-bt:40px;
     }
 
     .title{
