@@ -9,8 +9,8 @@
     /* --headbg: #1b1871; */
     --clr-1: #00c2ff;
     --clr-2: #33ff8c;
-    --clr-3: #ffc640;
-    --clr-4: #e54cff;
+    --clr-3: #fd00d3;
+    --clr-4: #f7ff01;
 
     --blur: 1rem;
     --fs: 3.5rem;
@@ -27,15 +27,16 @@ body {
     box-sizing: border-box;
     margin: 0;
     background-image: var(--headbg);
+    user-select: none;
 }
 
 .wrapper{
-    background-color: var(--bodybg);
-    background-image: var(--headbg);
+    /* background-color: var(--bodybg);
+    background-image: var(--headbg); */
     color: var(--bodycolor);
     text-align: center;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
 }
 
 
@@ -68,7 +69,7 @@ body {
 
 
 header {
-    padding: 60px 20px;
+    padding: 60px 10px;
     /* padding-bottom: 130px; */
 }
 
@@ -98,7 +99,7 @@ header {
     margin: 0 auto;
     padding: 0 20px;
     font-family: "Inter", "DM Sans", Arial, sans-serif;
-    /* width: fit-content; */
+    width: fit-content;
     margin-bottom: 50px;
 
 }
@@ -109,7 +110,7 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 2;
+    z-index: 1;
     mix-blend-mode: darken;
     pointer-events: none;
 }
@@ -439,11 +440,12 @@ button:disabled {
 
 .card {
     width: 320px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(26, 24, 36, 0.116);
     backdrop-filter: blur(12px);
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0px 5px 20px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 255, 255, 0.2);
+
     text-align: center;
     transition: transform 0.3s ease-in-out;
     overflow: hidden;
@@ -601,6 +603,291 @@ input:focus {
 
 
 
+
+/* Background with Subtle Motion */
+.about-bg {
+    /* background: radial-gradient(circle, rgba(0, 0, 0, 0.8) 40%, rgba(10, 10, 10, 1) 100%); */
+    padding: 120px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Floating Animated Glow */
+.about-bg::before {
+    content: "";
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    /* background: var(--clr-2); */
+    filter: blur(120px);
+    top: 10%;
+    left: 20%;
+    opacity: 0.4;
+    animation: floatingGlow 6s infinite alternate ease-in-out;
+}
+
+@keyframes floatingGlow {
+    from {
+        transform: translateY(-10px);
+    }
+    to {
+        transform: translateY(10px);
+    }
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: left;
+    /* background: rgba(25, 25, 25, 0.7); */
+    box-shadow: 0 10px 40px rgba(0, 255, 255, 0.2);
+    transition: 0.3s ease-in-out;
+}
+
+/* Image with Glowing Effect */
+.about-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid var(--clr-3);
+    box-shadow: 0 0 25px var(--clr-3);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.about-image img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 40px var(--clr-4);
+}
+
+/* Text Styling */
+.about-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 20px var(--clr-3);
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.about-title span {
+    color: var(--clr-4);
+    text-shadow: 0 0 15px var(--clr-4);
+}
+
+.about-text {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    opacity: 0.85;
+    margin-bottom: 18px;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+/* Button with Neon Glow */
+/* .about-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 28px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, var(--clr-3), var(--clr-4));
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0px 5px 15px var(--clr-3);
+    transition: all 0.3s ease-in-out;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.about-btn:hover {
+    background: linear-gradient(90deg, var(--clr-4), var(--clr-5));
+    transform: scale(1.1);
+    box-shadow: 0px 8px 25px var(--clr-5);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} */
+/* Stylish Contact Text */
+.about-contact {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    animation: fadeInUp 1.6s ease-in-out;
+}
+
+/* Glowing Email Link */
+.about-email {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: var(--clr-4);
+    text-decoration: none;
+    text-shadow: 0 0 12px var(--clr-3);
+    position: relative;
+    transition: 0.4s ease-in-out;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Hover Glow & Animation */
+/* .about-email:hover {
+    color: #fff;
+    text-shadow: 0 0 20px var(--clr-5), 0 0 40px var(--clr-5), 0 0 60px var(--clr-5);
+    transform: scale(1.15);
+    background: rgba(255, 255, 255, 0.2);
+} */
+
+/* Animated Underline */
+.about-email::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background: var(--clr-4);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* .about-email:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+} */
+
+/* Pulsating Effect to Grab Attention */
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 10px var(--clr-3); }
+    50% { box-shadow: 0 0 20px var(--clr-5), 0 0 40px var(--clr-5); }
+    100% { box-shadow: 0 0 10px var(--clr-3); }
+}
+
+.about-email {
+    animation: pulseGlow 1.5s infinite alternate;
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+    .about-container {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 2.5rem;
+    }
+
+    .about-text {
+        font-size: 1.1rem;
+    }
+
+    .about-image img {
+        width: 160px;
+        height: 160px;
+    }
+}
+
+
+
+
+/* Social Media Buttons Container */
+.social-buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    
+}
+
+/* Base Button Style */
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 18px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+   
+}
+
+/* LinkedIn Button */
+.linkedin {
+    background: linear-gradient(45deg, #0077b5, #004b7c);
+}
+.linkedin:hover {
+    background: #0077b5;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #0077b5;
+}
+
+/* Instagram Button */
+.instagram {
+    background: linear-gradient(45deg, #f77737, #e4405f, #8a3ab9);
+}
+.instagram:hover {
+    background: #e4405f;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #e4405f;
+}
+
+/* YouTube Button */
+.youtube {
+    background: linear-gradient(45deg, #ff0000, #cc0000);
+}
+.youtube:hover {
+    background: #ff0000;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #ff0000;
+}
+
+/* Icon Styling */
+.social-btn i {
+    font-size: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .social-buttons {
+        flex-direction: column;
+        /* gap: 10px; */
+         max-width: fit-content;
+        margin: 0 auto;
+        
+    }
+}
+
+
+
 /* Media Queries for Responsive Design */
 
 @media screen and (max-width: 1225px) {
@@ -683,16 +970,17 @@ input:focus {
 
 @media screen and (max-width: 370px) {
     :root {
-        --fs: 2rem;
-        --para-sz:0.8rem;
-        --mg-bt:40px;
+        --fs: 2.35rem;
+        --para-sz:1rem;
+        --mg-bt:30px;
     }
 
     .title{
         margin-bottom: 20px;
     }
-
-    
+    header{
+        padding-bottom: 30px;
+    }
 
 }
 
