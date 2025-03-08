@@ -889,7 +889,7 @@ input:focus {
 
 
 /* Media Queries for Responsive Design */
-
+/* 
 @media screen and (max-width: 1225px) {
     :root {
         --fs: 2.8rem;
@@ -948,12 +948,12 @@ input:focus {
     }
 
 }
-
+*/
 
 @media screen and (max-width: 450px) {
     :root {
-        --fs: 2rem;
-        --para-sz:0.9rem;
+        --fs: 2.9rem;
+        --para-sz:1.3rem;
         --mg-bt:20px;
     }
 
@@ -970,8 +970,8 @@ input:focus {
 
 @media screen and (max-width: 370px) {
     :root {
-        --fs: 2.35rem;
-        --para-sz:1rem;
+        --fs: 2.6rem;
+        --para-sz:1.1rem;
         --mg-bt:30px;
     }
 
@@ -982,6 +982,6 @@ input:focus {
         padding-bottom: 30px;
     }
 
-}
+} 
 
 
